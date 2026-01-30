@@ -104,10 +104,10 @@ application.get("/attendance", (req, res) => {
     const name = req.query.name;
     const present = req.query.present;
     if (present === 'yes') {
-        return res.send($name, "is present.")
+        return res.send(name + " is present.")
     }
     else {
-        return res.send($name, "is absent.")
+        return res.send(name + " is absent.")
     }
 });
 application.listen(8000, () => console.log("Server Started"));
